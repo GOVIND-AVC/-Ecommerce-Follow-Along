@@ -17,7 +17,7 @@ This project is an e-commerce website built using the MERN stack. The primary ob
 ## Milestone 1: Project Overview
 In the first milestone, we covered the following key aspects of the project:
 
-1. **Project Setup**: Initialized the project repository    , set up the project structure, and configured the necessary development environment.
+1. **Project Setup**: Initialized the project repository, set up the project structure, and configured the necessary development environment.
 2. **Requirements Gathering**: Discussed the project's requirements and created a list of features that need to be implemented.
 3. **Initial Planning**: Outlined the project's roadmap, setting clear milestones and deliverables.
 4. **Version Control with Git**: Learned how to initialize a Git repository, manage branches, and push changes to GitHub.
