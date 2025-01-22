@@ -23,3 +23,9 @@ In the first milestone, we covered the following key aspects of the project:
 4. **Version Control with Git**: Learned how to initialize a Git repository, manage branches, and push changes to GitHub.
 5. **Basic Functionality**: Implemented the core functionality of the project, laying the foundation for future development.
 
+
+## Milestone 2: Project Overview
+**Project Setup**: ADDED FRONTEND FOLDER AND SET UP LOGIN PAGE
+
+## Milestone 3: Project Overview
+**Project Setup**: ADDED APP.JS FILE IN THE BACKEND AND CONNECTED TO MONGODB
