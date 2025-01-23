@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config(); // Import dotenv to use environment variables
+// require('dotenv').config(); // Import dotenv to use environment variables
+
+const user_route = require('./routes/user_route.js'); // Updated import path
 
 const userModel = require('./model/user.model'); // Import the user model
 
@@ -8,24 +10,12 @@ const app = express();
 const port = 8000;
 
 app.use(express.json());
+app.use('/', user_route);
 
-let connection = mongoose.connect(process.env.MONGODB_URI); // Use environment variable for MongoDB connection
+let connection = mongoose.connect("mongodb+srv://eemail2govind:govind100@brucecluster0.3j1xf.mongodb.net/?retryWrites=true&w=majority&appName=BRUCECluster0"); // Use environment variable for MongoDB connection
 
 app.get('/ping', (req, res) => {
     res.send("pong");
-});
-
-app.post("/create", async (req, res) => {
-    let payload = req.body;
-
-    try {
-        let newUser = new userModel.userModel(payload);
-
-        await newUser.save();
-        res.status(200).send(newUser);
-    } catch (error) {
-        res.status(500).send({"error": error.message}); // Improved error handling
-    }
 });
 
 app.listen(port, async () => {
