@@ -29,3 +29,9 @@ In the first milestone, we covered the following key aspects of the project:
 
 ## Milestone 3: Project Overview
 **Project Setup**: ADDED APP.JS FILE IN THE BACKEND AND CONNECTED TO MONGODB
+
+## Milestone 4: Project Overview
+**Project Setup** : Create a User Model: This is like a blueprint for how your users' data will be 
+                    stored in the database.
+                    Create a User Controller: This will help you manage what happens with your user data (like adding a new user or getting their information).
+                    Enable and configure Multer: Multer will allow your app to accept and store files (such as images) uploaded by users.
