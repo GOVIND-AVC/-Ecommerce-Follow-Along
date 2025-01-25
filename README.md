@@ -35,3 +35,11 @@ In the first milestone, we covered the following key aspects of the project:
                     stored in the database.
                     Create a User Controller: This will help you manage what happens with your user data (like adding a new user or getting their information).
                     Enable and configure Multer: Multer will allow your app to accept and store files (such as images) uploaded by users.
+
+## Milestone 5: Project Overview
+**Project Setup** : SET UP THE LOGIN PAGE FUNCTIONALITY.
+                    INTEGRATED THE USER MODEL AND CONTROLLER WITH THE LOGIN PAGE.
+                    SET UP THE SIGNUP PAGE FUNCTIONALITY.
+                    CONNECTED THE LOGIN PAGE WITH THE BACKEND
+                    SET UP TO DISPLAY ALERT MESSAGE BASED ON THE CREDINTIALS ENTERED
+                    

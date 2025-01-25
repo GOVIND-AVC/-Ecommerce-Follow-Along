@@ -6,10 +6,13 @@ const user_route = require('./routes/user_route.js'); // Updated import path
 
 const userModel = require('./model/user.model'); // Import the user model
 
+const cors = require('cors')
+
 const app = express();
 const port = 8000;
 
 app.use(express.json());
+app.use(cors());
 app.use('/', user_route);
 
 let connection = mongoose.connect("mongodb+srv://eemail2govind:govind100@brucecluster0.3j1xf.mongodb.net/?retryWrites=true&w=majority&appName=BRUCECluster0"); // Use environment variable for MongoDB connection

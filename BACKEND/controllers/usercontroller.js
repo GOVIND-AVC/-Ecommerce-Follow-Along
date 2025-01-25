@@ -1,10 +1,11 @@
-const userModel = require('../model/user.model.js');
+const mongoose = require('mongoose');
+const userModel = require('../model/user.model.js').userModel; // Correctly import userModel
 
 const createuser = async (req, res) => {
     try {
         let payload = req.body;
         try {
-            let newUser = new userModel.userModel(payload);
+            let newUser = new userModel(payload);
             await newUser.save();
             res.status(200).send(newUser);
         } catch (error) {
@@ -12,6 +13,22 @@ const createuser = async (req, res) => {
         }
     } catch {
         console.log("error");
+    }
+}
+
+const userlogin = async(req,res)=>{
+    const {email,password}=req.body;
+    try{
+        const existinguser  =  await userModel.findOne({email});
+        if(!existinguser || existinguser.password !== password){
+            return res.status(400).send({"error": "Invalid credentials"});
+        }
+        res.status(200).json({message:'login successful'});
+    } catch(error){
+        console.error("Login error:", error); // Log the error details
+        res.status(500).json({
+            message:'Server error, please try later'
+        });
     }
 }
 
@@ -30,4 +47,4 @@ const storage = multer.diskStorage({
 // Initialize multer with the storage configuration
 const upload = multer({ storage: storage });
 
-module.exports = { createuser, upload }; // Export the upload variable
+module.exports = { createuser, upload, userlogin }; // Export the upload variable
