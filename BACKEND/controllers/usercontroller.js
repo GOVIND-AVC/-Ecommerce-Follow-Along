@@ -1,13 +1,18 @@
 const mongoose = require('mongoose');
 const userModel = require('../model/user.model.js').userModel; // Correctly import userModel
 
+const bcrypt = require('bcrypt'); // Import bcrypt
+
 const createuser = async (req, res) => {
     try {
         let payload = req.body;
+        const hashedPassword = await bcrypt.hash(payload.password, 10); // Hash the password
+        payload.password = hashedPassword;// Replace plain password with hashed password
         try {
             let newUser = new userModel(payload);
             await newUser.save();
             res.status(200).send(newUser);
+
         } catch (error) {
             res.status(500).send({"error": error.message}); // Improved error handling
         }

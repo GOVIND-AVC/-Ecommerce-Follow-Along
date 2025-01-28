@@ -23,7 +23,6 @@ In the first milestone, we covered the following key aspects of the project:
 4. **Version Control with Git**: Learned how to initialize a Git repository, manage branches, and push changes to GitHub.
 5. **Basic Functionality**: Implemented the core functionality of the project, laying the foundation for future development.
 
-
 ## Milestone 2: Project Overview
 **Project Setup**: ADDED FRONTEND FOLDER AND SET UP LOGIN PAGE
 
@@ -41,5 +40,13 @@ In the first milestone, we covered the following key aspects of the project:
                     INTEGRATED THE USER MODEL AND CONTROLLER WITH THE LOGIN PAGE.
                     SET UP THE SIGNUP PAGE FUNCTIONALITY.
                     CONNECTED THE LOGIN PAGE WITH THE BACKEND
-                    SET UP TO DISPLAY ALERT MESSAGE BASED ON THE CREDINTIALS ENTERED
-                    
+                    SET UP TO DISPLAY ALERT MESSAGE BASED ON THE CREDINTIALS ENTERED.
+                    IMPLEMENTED A SIGN-UP PAGE WITH FORM VALIDATION:
+                    - Fields: Name, Email, Password
+                    - Validation Rules: 
+                      - Name is required.
+                      - Email must be in a valid format.
+                      - Password must be at least 6 characters long.
+## Milestone 6: Project Overview
+**Project Setup** : BY USING BCRYPT WE CHANGED THE PASSWORD STORED INTO HASHED OR ENCRYPTED FORMAT INSTEAD OF PLAIN  
+                    TEXT . ALL THE DATA WILL BE SAVED IN THE DATABASE WITHT THE PASSWORD IN THE ENCRYPTED FORMAT
