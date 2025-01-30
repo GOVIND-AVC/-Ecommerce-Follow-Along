@@ -25,9 +25,16 @@ const userlogin = async(req,res)=>{
     const {email,password}=req.body;
     try{
         const existinguser  =  await userModel.findOne({email});
-        if(!existinguser || existinguser.password !== password){
-            return res.status(400).send({"error": "Invalid credentials"});
+        if(!existinguser){
+            return res.status(400).send({"error":"user doesnot exist"})
         }
+        const validpassword = await bcrypt.compare(password,existinguser.password);
+        if(!validpassword){
+            return res.status(400).send({"error":"invalid credintials"})
+        }
+        // if(!existinguser || existinguser.password !== password){
+        //     return res.status(400).send({"error": "Invalid credentials"});
+        // }
         res.status(200).json({message:'login successful'});
     } catch(error){
         console.error("Login error:", error); // Log the error details
