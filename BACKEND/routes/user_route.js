@@ -3,7 +3,7 @@ const { createuser, upload,userlogin} = require('../controllers/usercontroller.j
 
 const router = express.Router();
 
-router.post("/create", createuser);
+router.post("/signup", createuser);
 
 router.post('/upload', upload.single('profilePic'), (req, res) => {
     res.send('File uploaded successfully!');
