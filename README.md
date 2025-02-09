@@ -50,5 +50,12 @@ In the first milestone, we covered the following key aspects of the project:
 ## Milestone 6: Project Overview
 **Project Setup** : BY USING BCRYPT WE CHANGED THE PASSWORD STORED INTO HASHED OR ENCRYPTED FORMAT INSTEAD OF PLAIN  
                     TEXT . ALL THE DATA WILL BE SAVED IN THE DATABASE WITHT THE PASSWORD IN THE ENCRYPTED FORMAT
+
 ## Milestone 7: Project Overview
 **Project Setup** : USING BCRYPT TO HASH THE INPUTED PASSWORD AND COMPARE IT WITH THE PASWORD STORED IN THE DATABASE
+
+## Milestone 7: Project Overview
+**Project Setup** : Created ProductCard.jsx to display individual product details.
+                    Created HomePage.jsx to render a list of product cards using mock data.
+                    Created products.js to provide mock product data.
+                    Updated App.jsx to set the homepage as the default route.
